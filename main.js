@@ -130,6 +130,25 @@ let todoList = [];
 let progressList = [];
 let doneList = [];
 
+// if (localStorage.getItem("Todo") != null) {
+//   todoList = JSON.parse(localStorage.getItem("Todo"));
+// } else {
+//   todoList = [];
+// }
+
+checkForIntializeItems("Todo", todoList);
+
+function checkForIntializeItems(storgeName, list) {
+  if (localStorage.getItem(storgeName) != null) {
+    list = JSON.parse(localStorage.getItem(storgeName));
+  } else {
+    list = [];
+  }
+}
+
+getTodo();
+getProg();
+getDone();
 // Drag & Drop FUNCTIONS
 function drag(event) {
   event.dataTransfer.setData("text", event.target.id);
@@ -146,7 +165,6 @@ function drop(event) {
   let parId = event.dataTransfer.getData("par-id");
   let draggedItem = document.getElementById(id);
 
-  // Create a unique identifier for each todo item
   let uniqueId = "todo-" + new Date().getTime();
 
   event.target.appendChild(draggedItem);
@@ -205,6 +223,7 @@ function addTodo() {
   let uniqueId = "todo-" + new Date().getTime();
   let newTodo = { id: uniqueId, text: todoText.value };
   todoList.push(newTodo);
+  localStorage.setItem("Todo", JSON.stringify(todoList));
   getTodo();
 }
 

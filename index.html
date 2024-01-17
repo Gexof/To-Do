@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TODO - LIST</title>
 
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -12,37 +20,37 @@
       <input class="inTodo" type="text" placeholder="Add TODO" id="todo-text" />
       <button class="btn" id="add-btn">ADD</button>
     </div>
+    <div class="todos-body">
+      <div class="todo b-r-10 p-t-12 p-r-12 p-b-12 p-l-12 tra">
+        <h2>Todo</h2>
+        <div
+          class="tra"
+          id="todo-div"
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+        ></div>
+      </div>
 
-    <div>
-      <h2>Todo</h2>
-      <div
-        class="todo"
-        id="todo-div"
-        ondragover="allowDrop(event)"
-        ondrop="drop(event)"
-      ></div>
+      <div class="progress b-r-10 p-t-12 p-r-12 p-b-12 p-l-12 tra">
+        <h2>Progress</h2>
+        <div
+          class=""
+          id="progress-div"
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+        ></div>
+      </div>
+
+      <div class="done b-r-10 p-t-12 p-r-12 p-b-12 p-l-12 tra">
+        <h2>Done</h2>
+        <div
+          class=""
+          id="done-div"
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+        ></div>
+      </div>
     </div>
-
-    <div>
-      <h2>Progress</h2>
-      <div
-        class="progress"
-        id="progress-div"
-        ondragover="allowDrop(event)"
-        ondrop="drop(event)"
-      ></div>
-    </div>
-
-    <div>
-      <h2>Done</h2>
-      <div
-        class="done"
-        id="done-div"
-        ondragover="allowDrop(event)"
-        ondrop="drop(event)"
-      ></div>
-    </div>
-
     <script src="main.js"></script>
   </body>
 </html>

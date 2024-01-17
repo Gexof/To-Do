@@ -1,3 +1,35 @@
+:root {
+  --red-color: #fef4f3;
+  --dark-red-color: #6e1d28;
+  --yellow-color: #fefaf1;
+  --dark-yellow-color: #694d1e;
+  --green-color: #f4f9f3;
+  --dark-green-color: #335b26;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 120px 90px 0 90px;
+  font-family: "Cairo", sans-serif;
+}
+
+/* Button */
+.btn {
+  background-color: #ff4f5a;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* Input Of Todo */
 .inTodo {
   background-color: #ccc;
   color: #222222;
@@ -14,41 +46,88 @@
   outline: none;
 }
 
-.btn {
-  background-color: #ff4f5a;
-  color: white;
-  border: none;
-  width: 120px;
-  height: 40px;
-  border-radius: 50px;
-  font-weight: 600;
+/* Border Raduis */
+.b-r-10 {
+  border-radius: 10px;
+}
+
+/* Padding */
+.p-t-12 {
+  padding-top: 12px;
+}
+
+.p-r-12 {
+  padding-right: 12px;
+}
+
+.p-b-12 {
+  padding-bottom: 12px;
+}
+
+.p-l-12 {
+  padding-left: 12px;
+}
+
+/* Flex */
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Transation */
+.tra {
+  transition: all 0.3s ease;
+}
+
+/* Body */
+.todos-body {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .todo {
-  height: 150px;
+  width: 25%;
+  background-color: var(--red-color);
+}
+.todo h2 {
+  color: var(--dark-red-color);
 }
 
 .progress {
-  height: 150px;
-  background-color: yellow;
+  width: 25%;
+  background-color: var(--yellow-color);
+}
+
+.progress h2 {
+  color: var(--dark-yellow-color);
 }
 
 .done {
-  height: 150px;
-  background-color: green;
+  width: 25%;
+  background-color: var(--green-color);
+}
+
+.done h2 {
+  color: var(--dark-green-color);
+}
+
+#todo-div,
+#progress-div,
+#done-div {
+  width: 100%;
+  height: 100%;
 }
 
 .todo-r {
-  background-color: #222222;
-  width: 320px;
+  background-color: #fff;
   height: 40px;
   display: flex;
   padding-left: 16px;
   align-items: center;
-}
-
-.todo-r h5 {
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: black;
+  border-radius: 10px;
+  margin-top: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
