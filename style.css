@@ -5,6 +5,8 @@
   --dark-yellow-color: #694d1e;
   --green-color: #f4f9f3;
   --dark-green-color: #335b26;
+  --dark-color: #363530;
+  --gray-color: #e9e9e9;
 }
 
 * {
@@ -14,36 +16,44 @@
 }
 
 body {
-  padding: 120px 90px 0 90px;
+  padding: 40px 250px 0 250px;
   font-family: "Cairo", sans-serif;
 }
 
 /* Button */
 .btn {
-  background-color: #ff4f5a;
+  background-color: var(--dark-red-color);
   color: white;
   border: none;
   width: 120px;
-  height: 40px;
-  border-radius: 50px;
+  height: 55px;
   font-weight: 600;
 }
 
 /* Input Of Todo */
 .inTodo {
-  background-color: #ccc;
-  color: #222222;
+  background-color: #e9e9e9;
+  color: var(--dark-color);
   border: none;
   width: 360px;
-  height: 40px;
-  border-radius: 50px;
+  height: 55px;
   font-size: 14px;
   font-weight: 600;
   padding-left: 12px;
+  margin-right: 16px;
 }
 
 .inTodo:focus {
   outline: none;
+}
+
+/* Line */
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--gray-color);
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 /* Border Raduis */
@@ -79,14 +89,34 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Fonts */
+.f-w-900 {
+  font-weight: 900;
+}
+
 /* Body */
+
+.title {
+  color: var(--dark-color);
+  font-size: 68px;
+  margin-bottom: 22px;
+}
+
+.desc {
+  font-size: 18px;
+  color: var(--dark-color);
+  margin-bottom: 32px;
+  width: 70%;
+  font-weight: 600;
+}
+
 .todos-body {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .todo {
-  width: 25%;
+  width: 30%;
   background-color: var(--red-color);
 }
 .todo h2 {
@@ -94,7 +124,7 @@ body {
 }
 
 .progress {
-  width: 25%;
+  width: 30%;
   background-color: var(--yellow-color);
 }
 
@@ -103,7 +133,7 @@ body {
 }
 
 .done {
-  width: 25%;
+  width: 30%;
   background-color: var(--green-color);
 }
 

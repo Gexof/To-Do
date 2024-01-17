@@ -16,10 +16,31 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <h1 class="title f-w-900">
+      <i class="fa-solid fa-rectangle-list"></i> OrganizeMe
+    </h1>
+
+    <p class="desc">
+      Are you tired of feeling overwhelmed by tasks? Meet
+      <span class="f-w-900">OrganizeMe</span>, the ultimate Todo List app
+      designed to simplify your life and boost your productivity. From managing
+      daily errands to planning long-term goals,
+      <span class="f-w-900">OrganizeMe</span> is your go-to companion for
+      staying on top of your tasks with ease.
+    </p>
+
     <div>
-      <input class="inTodo" type="text" placeholder="Add TODO" id="todo-text" />
-      <button class="btn" id="add-btn">ADD</button>
+      <input
+        class="inTodo b-r-10"
+        type="text"
+        placeholder="ADD TODO"
+        id="todo-text"
+      />
+      <button class="btn b-r-10" id="add-btn">ADD</button>
     </div>
+
+    <div class="line"></div>
+
     <div class="todos-body">
       <div class="todo b-r-10 p-t-12 p-r-12 p-b-12 p-l-12 tra">
         <h2>Todo</h2>
@@ -51,6 +72,14 @@
         ></div>
       </div>
     </div>
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/e763ba064a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main Script -->
     <script src="main.js"></script>
   </body>
 </html>

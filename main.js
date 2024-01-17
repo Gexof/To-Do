@@ -106,6 +106,8 @@ function addTodo() {
   todoList.push(newTodo);
   localStorage.setItem("Todo", JSON.stringify(todoList));
   getTodo();
+
+  todoText.value = "";
 }
 
 function remTodoFromList(list, id, storageName) {
