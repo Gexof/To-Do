@@ -1,0 +1,54 @@
+.inTodo {
+  background-color: #ccc;
+  color: #222222;
+  border: none;
+  width: 360px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 12px;
+}
+
+.inTodo:focus {
+  outline: none;
+}
+
+.btn {
+  background-color: #ff4f5a;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.todo {
+  height: 150px;
+}
+
+.progress {
+  height: 150px;
+  background-color: yellow;
+}
+
+.done {
+  height: 150px;
+  background-color: green;
+}
+
+.todo-r {
+  background-color: #222222;
+  width: 320px;
+  height: 40px;
+  display: flex;
+  padding-left: 16px;
+  align-items: center;
+}
+
+.todo-r h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}

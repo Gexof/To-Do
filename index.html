@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO - LIST</title>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div>
+      <input class="inTodo" type="text" placeholder="Add TODO" id="todo-text" />
+      <button class="btn" id="add-btn">ADD</button>
+    </div>
+
+    <div>
+      <h2>Todo</h2>
+      <div
+        class="todo"
+        id="todo-div"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      ></div>
+    </div>
+
+    <div>
+      <h2>Progress</h2>
+      <div
+        class="progress"
+        id="progress-div"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      ></div>
+    </div>
+
+    <div>
+      <h2>Done</h2>
+      <div
+        class="done"
+        id="done-div"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+      ></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
