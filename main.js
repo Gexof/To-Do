@@ -33,6 +33,8 @@ function drop(event) {
   let parId = event.dataTransfer.getData("par-id");
   let draggedItem = document.getElementById(id);
 
+  console.log(id);
+
   let uniqueId = "todo-" + new Date().getTime();
 
   event.target.appendChild(draggedItem);
@@ -93,10 +95,10 @@ function drop(event) {
       );
     }
   }
+}
 
-  console.log(todoList);
-  console.log(progressList);
-  console.log(doneList);
+function stopProp(event) {
+  event.stopPropagation();
 }
 
 function addTodo() {
@@ -112,13 +114,12 @@ function addTodo() {
 
 function remTodoFromList(list, id, storageName) {
   let index = list.findIndex((todo) => todo.id === id);
-  if (index !== -1) {
-    list.splice(index, 1);
-    localStorage.setItem(storageName, JSON.stringify(list));
-    getTodo();
-    getProg();
-    getDone();
-  }
+  list.splice(index, 1);
+  localStorage.setItem(storageName, JSON.stringify(list));
+  console.log("Ree");
+  getTodo();
+  getProg();
+  getDone();
 }
 
 function addTodoToList(list, item, storageName) {
@@ -135,7 +136,8 @@ function getTodo() {
   let todos = ``;
   for (let i = 0; i < todoList.length; i++) {
     todos += `<div class="todo-r" id="${todoList[i].id}" draggable="true" ondragstart="drag(event)">
-    ${todoList[i].text}
+    ${todoList[i].text}  
+    <button onclick="remTodoFromList(todoList, '${todoList[i].id}', 'Todo')"><i class="fa-solid fa-trash-can"></i></button> 
     </div>`;
   }
   document.getElementById("todo-div").innerHTML = todos;
@@ -146,6 +148,7 @@ function getProg() {
   for (let i = 0; i < progressList.length; i++) {
     todos += `<div class="todo-r" id="${progressList[i].id}" draggable="true" ondragstart="drag(event)">
     ${progressList[i].text}
+    <button onclick="remTodoFromList(progressList, '${progressList[i].id}', 'Progress')"><i class="fa-solid fa-trash-can"></i></button> 
     </div>`;
   }
   document.getElementById("progress-div").innerHTML = todos;
@@ -156,6 +159,7 @@ function getDone() {
   for (let i = 0; i < doneList.length; i++) {
     todos += `<div class="todo-r" id="${doneList[i].id}" draggable="true" ondragstart="drag(event)">
     ${doneList[i].text}
+    <button onclick="remTodoFromList(doneList, '${doneList[i].id}', 'Done')"><i class="fa-solid fa-trash-can"></i></button> 
     </div>`;
   }
   document.getElementById("done-div").innerHTML = todos;
